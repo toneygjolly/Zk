@@ -1,0 +1,38 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="new page title" border="normal">
+<combobox fulfill="onOpen">
+<comboitem label="First Option"/>
+</combobox>
+
+<button id="btn" label="show" onClick="content.visible = true"/>
+
+<div id="content" fulfill="btn.onClick">
+Any content created automatically when btn is clicked
+</div>
+
+<tabbox>
+<tabs>
+<tab selected="true">tab 1</tab>
+<tab>tab 2</tab>
+</tabs>
+
+<tabpanels>
+
+<tabpanel>
+<label>This Label will </label>
+</tabpanel>
+
+<tabpanel fulfill="self.linkedTab.onSelect">
+<button>This button is loaded later....</button>
+</tabpanel>
+
+</tabpanels>
+</tabbox>
+<div>
+<button id="btn2" label="click to load"/>
+<div fulfill="btn2.onClick=foreach1example1.zul"/>
+
+</div>
+</window>
+</zk>

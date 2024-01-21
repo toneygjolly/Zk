@@ -1,0 +1,4 @@
+<hlayout>
+${arg.who}: <textbox value="${arg.value}"/>
+
+</hlayout>

@@ -1,0 +1,5 @@
+<?component name="username" macroURI="macroexample.zul"?>
+
+<window title="new page title" border="normal">
+<username/>
+</window>
